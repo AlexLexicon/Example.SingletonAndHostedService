@@ -22,7 +22,7 @@ public class MyHostedBackroundWorker : BackgroundService
 
             _myInMemorySingletonService.SetMyChartCache(myChart);
 
-            //run every minute
+            //run every 10 seconds
             await Task.Delay(TimeSpan.FromSeconds(10), stoppingToken);
         }
         while (!stoppingToken.IsCancellationRequested);
